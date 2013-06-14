@@ -4,8 +4,8 @@
 @interface GoogleAnalyticsPlugin : CDVPlugin  {
 }
 
-- (void) trackerWithTrackingId:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (void) trackEventWithCategory:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (void) trackView:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void) trackerWithTrackingId:(CDVInvokedUrlCommand*)command;
+- (void) trackEventWithCategory:(CDVInvokedUrlCommand*)command;
+- (void) trackView:(CDVInvokedUrlCommand*)command;
 
 @end

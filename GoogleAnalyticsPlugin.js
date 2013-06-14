@@ -7,10 +7,12 @@ if (!window.GA) {
 			cordova.exec(successCallback, errorCallback, "GoogleAnalyticsPlugin", "trackView", [pageUri]);
 		},
 		trackEventWithCategory: function(category,action,label,value, successCallback, errorCallback) {
-			var options = {category:category,
+			var options = {
+				category:category,
 				action:action,
 				label:label,
-				value:value};
+				value:value
+			};
 			cordova.exec(successCallback, errorCallback, "GoogleAnalyticsPlugin", "trackEventWithCategory", [options]);
 		},
 		hitDispatched: function(hitString) {
