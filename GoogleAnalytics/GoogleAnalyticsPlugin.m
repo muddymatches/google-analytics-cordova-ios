@@ -5,7 +5,6 @@ static const NSInteger kGANDispatchPeriodSec = 2;
 
 - (void) trackerWithTrackingId:(CDVInvokedUrlCommand*)command {
     NSString* accountId = [command.arguments objectAtIndex:0];
-    NSLog(accountId);
     [GAI sharedInstance].debug = YES;
     [GAI sharedInstance].dispatchInterval = kGANDispatchPeriodSec;
     [GAI sharedInstance].trackUncaughtExceptions = YES;
@@ -30,7 +29,6 @@ static const NSInteger kGANDispatchPeriodSec = 2;
 
 - (void) trackView:(CDVInvokedUrlCommand*)command {
     NSString* pageUri = [command.arguments objectAtIndex:0];
-    NSLog(pageUri);
     if (![[GAI sharedInstance].defaultTracker trackView:pageUri]) {
         // TODO: Handle error here
     }
